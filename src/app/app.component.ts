@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
   animate = new Animate;
   animation = '';
+  languageType = true;
 
   ngOnInit(): void {
     this.randomAnimation()
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
 
   randomAnimation(): void {
     setInterval(() => {
+      this.languageType = !this.languageType;
       const random = this.animate.random();
 
       this.animation = random.in;
