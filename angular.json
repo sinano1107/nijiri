@@ -130,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "nijiri"
+  "defaultProject": "nijiri",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
