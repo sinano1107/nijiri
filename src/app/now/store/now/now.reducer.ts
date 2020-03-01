@@ -1,7 +1,7 @@
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 
-import { Now } from '../../class/now';
+import { Now } from '../../../class/now';
 import { NowActions, NowActionTypes } from './now.actions';
 
 export const nowsFeatureKey = 'nows';

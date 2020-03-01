@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Now } from '../../class/now';
+import { Now } from '../../../class/now';
 
 export enum NowActionTypes {
   LoadNows = '[Now] Load Nows',

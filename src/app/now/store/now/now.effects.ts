@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { catchError, map, switchMap } from 'rxjs/operators';
 
-import { Now } from '../../class/now';
+import { Now } from '../../../class/now';
 import {
   NowActionTypes,
   LoadNows,
