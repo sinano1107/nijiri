@@ -4,6 +4,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +22,7 @@ import { NowModule } from './now/now.module';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    MatSnackBarModule,
     CoreModule,
     ImageModule,
     NowModule,
