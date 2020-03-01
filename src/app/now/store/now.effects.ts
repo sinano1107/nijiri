@@ -31,12 +31,14 @@ export class NowEffects {
       switchMap(() => {
         return this.db.collection('communities')
           .doc('g3Xnp6T1S9xwsDhZLyYZ')
-          .collection('nows')
+          .collection('nows', ref => {
+            return ref.orderBy('time', 'desc');
+          })
           .snapshotChanges().pipe(
             map(nows => nows.map(now => {
               const data = now.payload.doc.data();
               const id = now.payload.doc.id;
-              return new Now(id, data.uid, data.campusId);
+              return new Now(id, data.uid, data.campusId, data.time);
             })),
             map((res: Now[]) => {
               return new LoadNowsSuccess({
