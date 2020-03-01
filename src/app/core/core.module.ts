@@ -6,10 +6,11 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { SessionEffects } from './store/effects/session.effects';
+import { TimePipe } from './pipe/time.pipe';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [TimePipe],
   imports: [
     CommonModule,
     StoreModule.forRoot(reducers, {
@@ -25,6 +26,7 @@ import { SessionEffects } from './store/effects/session.effects';
       maxAge: 25, // stateの上限を設定
       logOnly: environment.production, // 開発環境でのみ動作するよう制限
     }),
-  ]
+  ],
+  exports: [TimePipe],
 })
 export class CoreModule { }

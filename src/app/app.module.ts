@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CoreModule } from './core/core.module';
 import { ImageModule } from './image/image.module';
+import { NowModule } from './now/now.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ImageModule } from './image/image.module';
     AngularFirestoreModule,
     CoreModule,
     ImageModule,
+    NowModule,
   ],
   providers: [AngularFireStorage],
   bootstrap: [AppComponent]

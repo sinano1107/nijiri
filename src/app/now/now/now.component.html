@@ -1,0 +1,10 @@
+<ng-container *ngFor="let now of nows">
+  <hr>
+  <div *ngIf="userDataList[now.uid]" class="my-2">
+    <app-image [imageId]="userDataList[now.uid].icon"
+      [classItem]="'rounded-full object-cover h-12 w-12 mx-3 inline-block'"></app-image>
+    <label class="text-xl ml-3">{{userDataList[now.uid].realName}}</label>
+    <label class="text-sm text-gray-600 float-right pt-6 pr-5">{{now.time | time}}</label>
+  </div>
+  <hr>
+</ng-container>
