@@ -11,6 +11,7 @@ import * as fromUserData from '../store/userData/user-data.reducer';
 import { LoadNows } from '../store/now/now.actions';
 import { LoadUserDatas } from '../store/userData/user-data.actions';
 import { QRDialogComponent } from './qrdialog/qrdialog.component';
+import { NowsDialogComponent } from './nows-dialog/nows-dialog.component';
 
 @Component({
   selector: 'app-now',
@@ -70,6 +71,13 @@ export class NowComponent implements OnInit, OnDestroy {
       'height': '450px',
       'width': '500px',
     });
+  }
+
+  showNows(): void {
+    this.matDialog.open(NowsDialogComponent, {
+      'height': '600px',
+      'width': '900px',
+    })
   }
 
   resetAt_Code(): void {

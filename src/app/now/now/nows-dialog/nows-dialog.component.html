@@ -1,0 +1,39 @@
+<div class="overflow-scroll">
+<div class="bg-blue-300 text-center rounded p-2">まど</div>
+
+<div class="grid grid-cols-3 gap-4">
+  <ng-container *ngFor="let i of x">
+    <div class="shadow-xl rounded border border-gray-200 col-span-1 mt-5 h-64 p-5">
+      <p class="text-gray-500 mb-5">グループ{{i+1}}</p>
+
+      <mat-chip-list>
+        <ng-container *ngFor="let uid of nowsList[i]">
+          <app-user-chip [icon]="userDataList[uid]['icon']" [realName]="userDataList[uid]['realName']"></app-user-chip>
+        </ng-container>
+      </mat-chip-list>
+
+    </div>
+  </ng-container>
+</div>
+
+<hr class="mt-5">
+<hr><hr><hr><hr><hr>
+
+<div class="grid grid-cols-3 gap-4">
+  <ng-container *ngFor="let i of y">
+    <div class="shadow-xl rounded border border-gray-200 col-span-1 mt-5 h-64 p-5">
+      <p class="text-gray-500 mb-5">グループ{{i+1}}</p>
+
+      <mat-chip-list>
+        <ng-container *ngFor="let uid of nowsList[i]">
+          <app-user-chip [icon]="userDataList[uid]['icon']" [realName]="userDataList[uid]['realName']"></app-user-chip>
+        </ng-container>
+      </mat-chip-list>
+
+    </div>
+
+  </ng-container>
+</div>
+
+<div class="bg-orange-300 text-center rounded p-2 mt-5">カウンター</div>
+</div>
