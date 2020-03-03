@@ -1,5 +1,13 @@
-<div class="animated text-center pt-56" [ngClass]="animation">
-  <p class="rainbow" style="font-size:8rem">{{languageType ? 'ようこそ！' : 'Welcome!'}}</p>
+<div *ngIf="isPasswordPage">
+  <p>パスワード入れろや</p>
+  <input type="password" [(ngModel)]="password">
+  <button (click)="pass()">送信</button>
 </div>
 
-<app-now></app-now>
+<div *ngIf="!isPasswordPage">
+  <div class="animated text-center pt-56" [ngClass]="animation">
+    <p class="rainbow" style="font-size:8rem">{{languageType ? 'ようこそ！' : 'Welcome!'}}</p>
+  </div>
+
+  <app-now></app-now>
+</div>
